@@ -43,15 +43,31 @@
       justify-content: space-around;
       margin-top: 27px;
       color: black; }
-      .header-container-menu-text-about:hover {
-        opacity: 0.1;
-        transition: all 0.2s ease-out; }
-      .header-container-menu-text-works:hover {
-        opacity: 0.1;
-        transition: all 0.2s ease-out; }
-      .header-container-menu-text-contact:hover {
-        opacity: 0.1;
-        transition: all 0.2s ease-out; }
+      .header-container-menu-text-link {
+        overflow: hidden; }
+      .header-container-menu-text .opacity {
+        transition: background-color 0.3s linear, color 0.3s linear;
+        background: rgba(255, 255, 255, 0); }
+        .header-container-menu-text .opacity:hover {
+          color: #124a58;
+          background: rgba(255, 255, 255, 0.9); }
+      .header-container-menu-text-link {
+        transition: color 0.3s ease-out; }
+        .header-container-menu-text-link::after {
+          width: 100%;
+          height: 100%;
+          display: block;
+          background-color: #895dda;
+          content: " ";
+          position: absolute;
+          top: 0;
+          transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateY(34px);
+          z-index: -1; }
+        .header-container-menu-text-link:hover {
+          color: #fffef9; }
+          .header-container-menu-text-link:hover::after {
+            transform: translateY(0px); }
   .header-container-logo {
     width: 45px;
     height: 45px;
@@ -95,13 +111,19 @@
       font-family: 'ubuntuMedium';
       margin-top: 30px;
       margin-left: 11%;
-      font-size: 18px; }
+      font-size: 16px; }
+      @media (min-width: 1024px) {
+        .body-container-left-undertitle {
+          font-size: 18px; } }
     .body-container-left-title {
       margin-top: 30px;
       margin-left: 11%;
       color: #fb8d72;
-      font-size: 72px;
+      font-size: 60px;
       font-family: 'ubuntubold'; }
+      @media (min-width: 1024px) {
+        .body-container-left-title {
+          font-size: 72px; } }
   .body-container-right {
     width: 25vw;
     overflow: hidden;
@@ -118,3 +140,14 @@
       .body-container-right-background:hover {
         opacity: 0.7;
         transition: all 0.2s ease-out; }
+
+.a {
+  width: 100px;
+  height: 34px;
+  line-height: 36px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  position: relative; }

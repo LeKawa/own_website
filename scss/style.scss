@@ -63,24 +63,42 @@ $text_content_title: #fb8d72;
       margin-top: 27px;
       color: black;
 
-      &-about {
+      &-link {
+        overflow: hidden;
+      }
+
+      .opacity {
+        transition: background-color 0.3s linear, color 0.3s linear;
+        background: rgba(255,255,255,0);
+
         &:hover {
-          opacity: 0.1;
-          transition: all 0.2s ease-out;
+          color: #124a58;
+          background: rgba(255,255,255,0.9);
         }
       }
 
-      &-works {
-        &:hover {
-          opacity: 0.1;
-          transition: all 0.2s ease-out;
-        }
-      }
+      &-link {
+        transition: color 0.3s ease-out;
 
-      &-contact {
+        &::after {
+          width: 100%;
+          height: 100%;
+          display: block;
+          background-color: #895dda;
+          content: " ";
+          position: absolute;
+          top: 0;
+          transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translateY(34px);
+          z-index: -1;
+        }
+
         &:hover {
-          opacity: 0.1;
-          transition: all 0.2s ease-out;
+          color: $background_color;
+
+          &::after {
+            transform: translateY(0px);
+          }
         }
       }
     }
@@ -137,15 +155,21 @@ $text_content_title: #fb8d72;
       font-family: 'ubuntuMedium';
       margin-top: 30px;
       margin-left: 11%;
-      font-size: 18px;
+      font-size: 16px;
+      @include desktop {
+        font-size: 18px;
+      }
     }
 
     &-title {
       margin-top: 30px;
       margin-left: 11%;
       color: $text_content_title;
-      font-size: 72px;
+      font-size: 60px;
       font-family: 'ubuntubold';
+      @include desktop {
+        font-size: 72px;
+      }
     }
   }
 
@@ -170,4 +194,18 @@ $text_content_title: #fb8d72;
       }
     }
   }
+}
+
+
+//les propriétées du link pour le header version desktop
+.a {
+  width: 100px;
+  height: 34px;
+  line-height: 36px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  position: relative;
 }
