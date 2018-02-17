@@ -3,6 +3,10 @@
   src: url("../font/Ubuntu-Regular.ttf"); }
 
 @font-face {
+  font-family: 'ubuntubold';
+  src: url("../font/Ubuntu-Bold.ttf"); }
+
+@font-face {
   font-family: 'ubuntulight';
   src: url("../font/Ubuntu-Light.ttf"); }
 
@@ -88,15 +92,16 @@
         width: 70%; } }
     .body-container-left-undertitle {
       color: #fb8d72;
-      font-family: 'ubuntulight';
+      font-family: 'ubuntuMedium';
       margin-top: 30px;
-      margin-left: 14%; }
+      margin-left: 11%;
+      font-size: 18px; }
     .body-container-left-title {
       margin-top: 30px;
       margin-left: 11%;
       color: #fb8d72;
-      font-size: 60px;
-      font-family: 'ubunturegular'; }
+      font-size: 72px;
+      font-family: 'ubuntubold'; }
   .body-container-right {
     width: 25vw;
     overflow: hidden;

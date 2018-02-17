@@ -1,23 +1,23 @@
 @font-face {
   font-family: 'ubunturegular';
   src: url("../font/Ubuntu-Regular.ttf");
- }
-
+}
+@font-face {
+  font-family: 'ubuntubold';
+  src: url("../font/Ubuntu-Bold.ttf");
+}
 @font-face {
   font-family: 'ubuntulight';
   src: url("../font/Ubuntu-Light.ttf");
- }
-
+}
 @font-face {
   font-family: 'ubuntuMedium';
   src: url("../font/Ubuntu-Medium.ttf");
- }
-
+}
 $tablet-width: 768px;
 $background_color: #fffef9;
 $desktop-width: 1024px;
 $text_content_title: #fb8d72;
-
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
     @content;
@@ -28,6 +28,7 @@ $text_content_title: #fb8d72;
     @content;
   }
 }
+
 .body-container {
   background-color: $background_color;
   overflow: hidden;
@@ -39,13 +40,13 @@ $text_content_title: #fb8d72;
   position: fixed;
   justify-content: space-between;
   display: flex;
-  @include tablet {
-  }
+  @include tablet {}
   @include desktop {
     width: 60%;
     margin-left: 50px;
   }
-  &-menu{
+
+  &-menu {
     display: none;
     @include desktop {
       display: block;
@@ -54,27 +55,30 @@ $text_content_title: #fb8d72;
       font-family: 'ubunturegular';
       font-size: 18px;
       justify-content: space-around;
-
     }
+
     &-text {
       display: flex;
       justify-content: space-around;
       margin-top: 27px;
-      color: black ;
+      color: black;
+
       &-about {
-        &:hover{
+        &:hover {
           opacity: 0.1;
           transition: all 0.2s ease-out;
         }
       }
+
       &-works {
-        &:hover{
+        &:hover {
           opacity: 0.1;
           transition: all 0.2s ease-out;
         }
       }
+
       &-contact {
-        &:hover{
+        &:hover {
           opacity: 0.1;
           transition: all 0.2s ease-out;
         }
@@ -93,7 +97,8 @@ $text_content_title: #fb8d72;
     @include desktop {
       background-color: pink;
     }
-    &-vrai{
+
+    &-vrai {
       width: 45px;
       height: 45px;
     }
@@ -123,22 +128,24 @@ $text_content_title: #fb8d72;
   &-left {
     width: 75vh;
     margin-top: 90px;
-    @include desktop{
+    @include desktop {
       width: 70%;
     }
-    &-undertitle{
-      color:  $text_content_title;
-      font-family: 'ubuntulight';
+
+    &-undertitle {
+      color: $text_content_title;
+      font-family: 'ubuntuMedium';
       margin-top: 30px;
-      margin-left: 14%;
+      margin-left: 11%;
+      font-size: 18px;
     }
 
     &-title {
       margin-top: 30px;
       margin-left: 11%;
       color: $text_content_title;
-      font-size: 60px;
-      font-family: 'ubunturegular';
+      font-size: 72px;
+      font-family: 'ubuntubold';
     }
   }
 
@@ -150,14 +157,14 @@ $text_content_title: #fb8d72;
       width: 30%;
       background-color: black;
       overflow: visible;
-
     }
 
     &-background {
       width: auto;
       background-color: black;
       height: 100vh;
-      &:hover{
+
+      &:hover {
         opacity: 0.7;
         transition: all 0.2s ease-out;
       }
