@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../font/Ubuntu-Regular.ttf");
+ }
+
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../font/Ubuntu-Light.ttf");
+ }
+
+@font-face {
+  font-family: 'ubuntuMedium';
+  src: url("../font/Ubuntu-Medium.ttf");
+ }
+
+$tablet-width: 768px;
+$background_color: #fffef9;
+$desktop-width: 1024px;
+$text_content_title: #fb8d72;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+.body-container {
+  background-color: $background_color;
+  overflow: hidden;
+}
+
+.header-container {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  display: flex;
+  @include tablet {
+  }
+  @include desktop {
+    width: 60%;
+    margin-left: 50px;
+  }
+  &-menu{
+    display: none;
+    @include desktop {
+      display: block;
+      width: 30%;
+      color: #895dda;
+      font-family: 'ubunturegular';
+      font-size: 18px;
+      justify-content: space-around;
+
+    }
+    &-text {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 27px;
+      color: black ;
+      &-about {
+        &:hover{
+          opacity: 0.1;
+          transition: all 0.2s ease-out;
+        }
+      }
+      &-works {
+        &:hover{
+          opacity: 0.1;
+          transition: all 0.2s ease-out;
+        }
+      }
+      &-contact {
+        &:hover{
+          opacity: 0.1;
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    width: 45px;
+    height: 45px;
+    margin-top: 22.5px;
+    margin-left: 2%;
+    @include tablet {
+      background-color: black;
+    }
+    @include desktop {
+      background-color: pink;
+    }
+    &-vrai{
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &-burger {
+    width: 45px;
+    height: 45px;
+    margin-top: 22.5px;
+    margin-right: 2%;
+    background-color: red;
+    @include tablet {
+      background-color: black;
+    }
+    @include desktop {
+      background-color: pink;
+      display: none;
+    }
+  }
+}
+
+.body-container {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+
+  &-left {
+    width: 75vh;
+    margin-top: 90px;
+    @include desktop{
+      width: 70%;
+    }
+    &-undertitle{
+      color:  $text_content_title;
+      font-family: 'ubuntulight';
+      margin-top: 30px;
+      margin-left: 14%;
+    }
+
+    &-title {
+      margin-top: 30px;
+      margin-left: 11%;
+      color: $text_content_title;
+      font-size: 60px;
+      font-family: 'ubunturegular';
+    }
+  }
+
+  &-right {
+    width: 25vw;
+    overflow: hidden;
+    background-color: black;
+    @include desktop {
+      width: 30%;
+      background-color: black;
+      overflow: visible;
+
+    }
+
+    &-background {
+      width: auto;
+      background-color: black;
+      height: 100vh;
+      &:hover{
+        opacity: 0.7;
+        transition: all 0.2s ease-out;
+      }
+    }
+  }
+}
