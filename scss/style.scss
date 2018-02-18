@@ -110,10 +110,8 @@ $text_content_title: #fb8d72;
     margin-top: 22.5px;
     margin-left: 2%;
     @include tablet {
-      background-color: black;
     }
     @include desktop {
-      background-color: pink;
     }
 
     &-vrai {
@@ -149,25 +147,33 @@ $text_content_title: #fb8d72;
     @include desktop {
       width: 70%;
     }
+    &-text {
+      font-family: "ubuntuMedium";
+      font-size: 60px;
+      width: 300px;
+      line-height: 150%;
+    }
 
     &-undertitle {
       color: $text_content_title;
       font-family: 'ubuntuMedium';
       margin-top: 30px;
-      margin-left: 11%;
+      margin-left: 2%;
       font-size: 16px;
       @include desktop {
         font-size: 18px;
+        margin-left: 11%;
       }
     }
 
     &-title {
       margin-top: 30px;
-      margin-left: 11%;
+      margin-left: 2%;
       color: $text_content_title;
       font-size: 60px;
       font-family: 'ubuntubold';
       @include desktop {
+        margin-left: 11%;
         font-size: 72px;
       }
     }
@@ -203,9 +209,8 @@ $text_content_title: #fb8d72;
   height: 34px;
   line-height: 36px;
   text-decoration: none;
-  color: black;
+  color: #895dda;
   text-align: center;
-  font-size: 16px;
-  margin: 10px;
+  font-size: 18px;
   position: relative;
 }

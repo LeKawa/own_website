@@ -73,12 +73,6 @@
     height: 45px;
     margin-top: 22.5px;
     margin-left: 2%; }
-    @media (min-width: 768px) {
-      .header-container-logo {
-        background-color: black; } }
-    @media (min-width: 1024px) {
-      .header-container-logo {
-        background-color: pink; } }
     .header-container-logo-vrai {
       width: 45px;
       height: 45px; }
@@ -106,23 +100,30 @@
     @media (min-width: 1024px) {
       .body-container-left {
         width: 70%; } }
+    .body-container-left-text {
+      font-family: "ubuntuMedium";
+      font-size: 60px;
+      width: 300px;
+      line-height: 150%; }
     .body-container-left-undertitle {
       color: #fb8d72;
       font-family: 'ubuntuMedium';
       margin-top: 30px;
-      margin-left: 11%;
+      margin-left: 2%;
       font-size: 16px; }
       @media (min-width: 1024px) {
         .body-container-left-undertitle {
-          font-size: 18px; } }
+          font-size: 18px;
+          margin-left: 11%; } }
     .body-container-left-title {
       margin-top: 30px;
-      margin-left: 11%;
+      margin-left: 2%;
       color: #fb8d72;
       font-size: 60px;
       font-family: 'ubuntubold'; }
       @media (min-width: 1024px) {
         .body-container-left-title {
+          margin-left: 11%;
           font-size: 72px; } }
   .body-container-right {
     width: 25vw;
@@ -146,8 +147,7 @@
   height: 34px;
   line-height: 36px;
   text-decoration: none;
-  color: black;
+  color: #895dda;
   text-align: center;
-  font-size: 16px;
-  margin: 10px;
+  font-size: 18px;
   position: relative; }
